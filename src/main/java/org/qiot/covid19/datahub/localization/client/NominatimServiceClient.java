@@ -4,6 +4,7 @@
 
 package org.qiot.covid19.datahub.localization.client;
 
+import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -25,7 +26,7 @@ public interface NominatimServiceClient {
     @Path("/reverse")
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
-    String reverse(@QueryParam("format") String format,
+    JsonObject reverse(@QueryParam("format") String format,
             @QueryParam("lon") double lon, @QueryParam("lat") double lat)
             throws Exception;
 

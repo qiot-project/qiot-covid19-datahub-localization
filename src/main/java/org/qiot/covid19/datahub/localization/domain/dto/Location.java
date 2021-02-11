@@ -6,6 +6,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 
 @RegisterForReflection
 public class Location implements Comparable<Location> {
+	
     public String city;
     public String country;
     public String ccode;
