@@ -2,7 +2,7 @@
  * 
  */
 
-package org.qiot.covid19.datahub.localization.client;
+package io.qiot.covid19.datahub.localization.client;
 
 import javax.json.JsonObject;
 import javax.ws.rs.Consumes;

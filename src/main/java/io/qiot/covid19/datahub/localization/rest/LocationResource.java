@@ -1,4 +1,4 @@
-package org.qiot.covid19.datahub.localization.rest;
+package io.qiot.covid19.datahub.localization.rest;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -8,9 +8,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.qiot.covid19.datahub.localization.domain.dto.Location;
-import org.qiot.covid19.datahub.localization.service.LocationService;
 import org.slf4j.Logger;
+
+import io.qiot.covid19.datahub.localization.domain.dto.Location;
+import io.qiot.covid19.datahub.localization.service.LocationService;
 
 /**
  * Validation through hibernate validator:
