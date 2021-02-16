@@ -17,6 +17,7 @@ public class LocationService {
     private static final String COUNTRY_CODE = "country_code";
     private static final String CITY = "city";
     private static final String TOWN = "town";
+    private static final String VILLAGE = "village";
 
     @Inject
     Logger LOGGER;
@@ -40,6 +41,8 @@ public class LocationService {
             location.city = jsonAddress.getString(CITY);
         else if (jsonAddress.containsKey(TOWN))
             location.city = jsonAddress.getString(TOWN);
+        else if (jsonAddress.containsKey(VILLAGE))
+            location.city = jsonAddress.getString(VILLAGE);
 
         if (jsonAddress.containsKey(COUNTRY)) {
             location.country = jsonAddress.getString(COUNTRY);
