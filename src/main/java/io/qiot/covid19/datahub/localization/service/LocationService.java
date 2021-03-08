@@ -10,22 +10,46 @@ import org.slf4j.Logger;
 import io.qiot.covid19.datahub.localization.client.NominatimServiceClient;
 import io.qiot.covid19.datahub.localization.domain.dto.Location;
 
+/**
+ * The Class LocationService.
+ *
+ * @author andreabattaglia
+ */
 @ApplicationScoped
 public class LocationService {
 
+    /** The Constant COUNTRY. */
     private static final String COUNTRY = "country";
+    
+    /** The Constant COUNTRY_CODE. */
     private static final String COUNTRY_CODE = "country_code";
+    
+    /** The Constant CITY. */
     private static final String CITY = "city";
+    
+    /** The Constant TOWN. */
     private static final String TOWN = "town";
+    
+    /** The Constant VILLAGE. */
     private static final String VILLAGE = "village";
 
+    /** The logger. */
     @Inject
     Logger LOGGER;
 
+    /** The service client. */
     @Inject
     @RestClient
     NominatimServiceClient serviceClient;
 
+    /**
+     * Translate coordinates.
+     *
+     * @param longitude the longitude
+     * @param latitude the latitude
+     * @return the location
+     * @throws Exception the exception
+     */
     public Location translateCoordinates(double longitude, double latitude)
             throws Exception {
 
