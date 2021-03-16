@@ -27,7 +27,7 @@ public interface NominatimServiceClient {
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     JsonObject reverse(@QueryParam("format") String format,
-            @QueryParam("lon") double lon, @QueryParam("lat") double lat)
-            throws Exception;
+            @QueryParam("lon") double lon, @QueryParam("lat") double lat,
+            @QueryParam("accept-language") String language) throws Exception;
 
 }

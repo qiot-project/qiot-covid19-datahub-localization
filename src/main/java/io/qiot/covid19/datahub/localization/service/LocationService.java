@@ -20,18 +20,21 @@ public class LocationService {
 
     /** The Constant COUNTRY. */
     private static final String COUNTRY = "country";
-    
+
     /** The Constant COUNTRY_CODE. */
     private static final String COUNTRY_CODE = "country_code";
-    
+
     /** The Constant CITY. */
     private static final String CITY = "city";
-    
+
     /** The Constant TOWN. */
     private static final String TOWN = "town";
-    
+
     /** The Constant VILLAGE. */
     private static final String VILLAGE = "village";
+
+    /** The Constant VILLAGE. */
+    private static final String LANGUAGE = "en";
 
     /** The logger. */
     @Inject
@@ -45,16 +48,19 @@ public class LocationService {
     /**
      * Translate coordinates.
      *
-     * @param longitude the longitude
-     * @param latitude the latitude
+     * @param longitude
+     *            the longitude
+     * @param latitude
+     *            the latitude
      * @return the location
-     * @throws Exception the exception
+     * @throws Exception
+     *             the exception
      */
     public Location translateCoordinates(double longitude, double latitude)
             throws Exception {
 
         JsonObject jsonResult = serviceClient.reverse("json", longitude,
-                latitude);
+                latitude, LANGUAGE);
 
         LOGGER.debug("Json Object: {}", jsonResult.toString());
 
