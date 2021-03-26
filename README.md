@@ -1,4 +1,4 @@
-# station-service project
+# localization-service
 
 This microservice is responsible for translating geographical coordinates into location.
 
